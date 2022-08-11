@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react"
+import UserProfile from "../components/header/UserProfile"
 
 function Dashboard() {
-  return (
-    <h1>Dashboard</h1>
-  )
+    return (
+        <>
+        <UserProfile />
+        </>
+    )
 }
 
 export default Dashboard
