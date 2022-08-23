@@ -10,14 +10,11 @@ export const useLogin = () => {
         setIsLoading(true)
         setError(null)
 
-        const response = await fetch(
-            "http://iqfarm.herokuapp.com/users/signin",
-            {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, password })
-            }
-        )
+        const response = await fetch("/users/signin", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password })
+        })
         const json = await response.json()
 
         if (!response.ok) {
