@@ -9,7 +9,8 @@ import {
     UilChart,
     UilSignOutAlt,
     UilUsdSquare,
-    UilMoneyWithdrawal
+    UilMoneyWithdrawal,
+    
 } from "@iconscout/react-unicons"
 
 import Card from "../Card/Card";
@@ -85,7 +86,7 @@ const Cards = () =>
                 boxShadow: "0px 10px 20px 0px #FDC0C7"
             },
             value: "fdfdf",
-            png: UilMoneyWithdrawal
+            png: UilUsdSquare
         },
         {
             title: "humidity",
@@ -108,7 +109,8 @@ const Cards = () =>
                                 title={card.title}
                                 color={card.color}
                                 value={card.value}
-                                png={card.png}
+                                png={ card.png }
+                                
                             />
                         </div>
                     )
