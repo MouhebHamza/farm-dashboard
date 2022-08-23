@@ -32,7 +32,7 @@ input {
   margin-top: 10px;
   margin-bottom: 20px;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid #9df79a;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -41,6 +41,7 @@ form button {
   border: 0;
   color: #fff;
   padding: 10px;
+  background-color: #57dd6e;
   font-family: "Poppins";
   border-radius: 4px;
   cursor: pointer;
@@ -63,9 +64,25 @@ form.signup, form.login {
   max-width: 400px;
   margin: 40px auto;
   padding: 20px;
-  background: #fff;
+  background: #bcffbe;
   border-radius: 4px;
 }
 .cont{
-    width:1800px;
+    width:100%;
+    
+}
+@media screen and (min-width: 1200px) {
+  .cont{
+    width: 1500px;
+    
+}
+}
+
+
+
+@media screen and (min-width: 768px)and (max-width: 1200px) {
+  .cont{
+    width: 900px;
+    
+}
 }

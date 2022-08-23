@@ -1,16 +1,15 @@
 import { Routes, Route, Navigate } from "react-router-dom"
 import { useAuthContext } from "./hooks/useAuthContext"
 
-import Calendar from "./pages/Calendar"
 import Stats from "./pages/Stats/Stats"
 import Signup from "./pages/Signup"
 import Login from "./pages/Login"
 import Home from "./pages/Home/Home"
-import './App.css'
-import Blank from "./pages/Blank"
 import Profile from "./pages/Profile/Profile"
 import Devices from "./pages/Devices/Devices"
 import Products from "./pages/Products/Products"
+import "./App.css"
+
 function App ()
 {
       const { user } = useAuthContext()

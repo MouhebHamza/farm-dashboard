@@ -16,26 +16,24 @@ const Card = (props) => {
 function CompactCard({ param }) {
   const Png = param.png;
   return (
-    <motion.div
-      className="CompactCard"
-      style={{
-        background: param.color.backGround,
-        boxShadow: param.color.boxShadow,
-      }}
-      layoutId="expandableCard"
-    >
-      <div className="radialBar">
-              <div className="image">
-
-          <Png />
+      <motion.div
+          className='CompactCard'
+          style={{
+              background: param.color.backGround,
+              boxShadow: param.color.boxShadow
+          }}
+          layoutId='expandableCard'>
+          <div className='radialBar'>
+              <div className='image'>
+                  <Png size='50' />
+              </div>
+              <h2>{param.title}</h2>
           </div>
-        <h2>{param.title}</h2>
-      </div>
-      <div className="detail">
-        <h3>${param.value}</h3>
-      </div>
-    </motion.div>
-  );
+          <div className='detail'>
+              <h3>${param.value}</h3>
+          </div>
+      </motion.div>
+  )
 }
 
 

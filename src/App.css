@@ -9,12 +9,12 @@
   --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
   --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
   --activeItem: #99f7a254;
-    --green: #57dd6e;
+  --green: #57dd6e;
 
 }
 
 .App {
-  /* padding: 0.5rem 3.5rem; */
+  /* margin: -0.5rem; */
   color: var(--black);
   background: linear-gradient(
     106.37deg,
