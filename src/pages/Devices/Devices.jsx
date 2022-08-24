@@ -10,7 +10,6 @@ function Devices() {
          
         <Sidebar itemIndex="1"/>
             <div className='table-devices'>
-                <h1>my devices</h1>
                 <Table />
         </div>
             <RightSide />
