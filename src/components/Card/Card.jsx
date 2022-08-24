@@ -30,7 +30,7 @@ function CompactCard({ param }) {
               <h2>{param.title}</h2>
           </div>
           <div className='detail'>
-              <h3>${param.value}</h3>
+              <h3>{param.value}</h3>
           </div>
       </motion.div>
   )

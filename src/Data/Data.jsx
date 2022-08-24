@@ -12,13 +12,35 @@ import {
 import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons"
 
 // Recent Card Imports
-import img1 from "../imgs/img1.png"
+import img1 from "../imgs/tract.jpg"
 import img2 from "../imgs/img2.png"
 import img3 from "../imgs/img3.png"
 
 
-
-    
+export const ProductCardsData = [
+    {
+        title: "rainfall",
+        img: img1,
+        description:
+            "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem "
+    },
+    {
+        title: "rainfall",
+        img: img1,
+        description: "lorem lorem lorem lorem lorem loremlorem lorem lorem"
+    },
+    {
+        title: "rainfall",
+        img: img1,
+        description: "lorem lorem lorem"
+    },
+    {
+        title: "rainfall",
+        img: img1,
+        description:
+            "lorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem lorem"
+    }
+]  
     
 
 // Sidebar Data
@@ -100,21 +122,18 @@ export const cardsData = [
 ]
 
 // Recent Update Card Data
-export const UpdatesData = [
+export const NotificationsData = [
     {
-        img: img1,
         name: "Andrew Thomas",
         noti: "has ordered Apple smart watch 2500mh battery.",
         time: "25 seconds ago"
     },
     {
-        img: img2,
         name: "James Bond",
         noti: "has received Samsung gadget for charging battery.",
         time: "30 minutes ago"
     },
     {
-        img: img3,
         name: "Iron Man",
         noti: "has ordered Apple smart watch, samsung Gear 2500mh battery.",
         time: "2 hours ago"
