@@ -2,17 +2,14 @@ import "./Card.css";
 import { motion } from "framer-motion";
 
 
-// parent Card
 
 const Card = (props) => {
   return (
     
         <CompactCard param={props} />
-      
   );
 };
 
-// Compact Card
 function CompactCard({ param }) {
   const Png = param.png;
   return (
@@ -23,10 +20,9 @@ function CompactCard({ param }) {
               boxShadow: param.color.boxShadow
           }}
           layoutId='expandableCard'>
-          <div className='radialBar'>
               <div className='image'>
-                  <Png size='50' />
-              </div>
+              <Png size='50' />
+              
               <h2>{param.title}</h2>
           </div>
           <div className='detail'>

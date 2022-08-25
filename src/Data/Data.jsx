@@ -43,20 +43,6 @@ export const ProductCardsData = [
 ]  
     
 
-// Sidebar Data
-
-
-// async function  weatherData  ()
-// {
-//   fetch(
-//       "https://api.openweathermap.org/data/2.5/weather?lat=36.806496&lon=10.806496&appid=9b0ba7cbf80580ed938ae75144319d05"
-//   )
-//       .then(response => response.json())
-//       .then(data => console.log(data))
-
-// }
-
-// const weather =await weatherData()
 
 
 export const SidebarData = [

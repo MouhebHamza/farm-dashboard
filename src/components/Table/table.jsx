@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect,useState} from "react"
 import Table from "@mui/material/Table"
 import TableBody from "@mui/material/TableBody"
 import TableCell from "@mui/material/TableCell"
@@ -7,17 +7,9 @@ import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
 import Paper from "@mui/material/Paper"
 import "./Table.css"
+import axios from "axios"
+import { getUserID, getToken } from "../../api/Device_api"
 
-function createData(name, trackingId, date, status) {
-    return { name, trackingId, date, status }
-}
-
-const rows = [
-    createData("1", 40, "70%", "Active"),
-    createData("2 ", 20, "70%", "Pending"),
-    createData("3", 30, "70%", "Active"),
-    createData("4", 25, "70%", "Offline")
-]
 
 const makeStyle = status => {
     if (status === "Active") {
@@ -38,7 +30,42 @@ const makeStyle = status => {
     }
 }
 
-export default function BasicTable() {
+export default function BasicTable ()
+{
+    const [data, setData] = useState(null)
+    useEffect(() => {
+        const fetchUserDevices = async () =>
+        {
+            {
+                const userId = getUserID()
+                const token = getToken()
+                axios( {
+                    url: `http://iqfarm.herokuapp.com/devices/user/${userId}`,
+                    method: "get",
+                    headers: {
+                        "x-access-token": token
+                    }
+                } )
+                    .then( response =>
+                    {
+                        console.log( response )
+                        setData(response["data"])
+
+                    } )
+                    .catch( err =>
+                    {
+                        console.log( err )
+                    } )
+            }
+        }
+        fetchUserDevices()
+    }, [] )
+
+   
+    
+    
+        if ( data === null ) return "Loading..."
+
     return (
         <div className='Table'>
             <h3>My devices</h3>
@@ -51,33 +78,38 @@ export default function BasicTable() {
                             <TableCell>Device ID</TableCell>
                             <TableCell align='left'>Temperature</TableCell>
                             <TableCell align='left'>Humidity</TableCell>
+                            <TableCell align='left'>NB insects</TableCell>
                             <TableCell align='left'>Status</TableCell>
                             <TableCell align='left'></TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody style={{ color: "white" }}>
-                        {rows.map(row => (
+                        {data.map(data => (
                             <TableRow
-                                key={row.name}
+                                key={data._id}
                                 sx={{
                                     "&:last-child td, &:last-child th": {
                                         border: 0
                                     }
                                 }}>
                                 <TableCell component='th' scope='row'>
-                                    {row.name}
+                                    {data._id}
                                 </TableCell>
+
+                                <TableCell align='left'>{data.temp}</TableCell>
+                                <TableCell align='left'>{data.hum}</TableCell>
                                 <TableCell align='left'>
-                                    {row.trackingId}
+                                    {data.numInsects}
                                 </TableCell>
-                                <TableCell align='left'>{row.date}</TableCell>
-                                <TableCell align='left'>
+
+                                {/* <TableCell align='left'>
                                     <span
                                         className='status'
-                                        style={makeStyle(row.status)}>
+                                        style={(row.status)}>
                                         {row.status}
                                     </span>
-                                </TableCell>
+                                </TableCell> */}
+
                                 <TableCell align='left' className='Details'>
                                     Details
                                 </TableCell>
