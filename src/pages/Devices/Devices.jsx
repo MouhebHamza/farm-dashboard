@@ -5,6 +5,7 @@ import Sidebar from "../../components/Sidebar/Sidebar"
 import "./Devices.css"
 function Devices ()
 {
+    
     return (
         
          <>

@@ -11,7 +11,7 @@ const Card = (props) => {
 };
 
 function CompactCard({ param }) {
-  const Png = param.png;
+  const Png = param.png;  
   return (
       <motion.div
           className='CompactCard'

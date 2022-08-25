@@ -79,9 +79,9 @@ const Cards = () =>
             value: `${humidity} %`,
             png: UilClouds
         }
-    ]
+    ]  
             if (!data) return "Loading..."
-                return (
+                return ( 
                     <div className='Cards'>
                         {cardsData.map((card, id) => {
                             return (
