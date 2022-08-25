@@ -8,13 +8,12 @@ import { motion } from "framer-motion"
 import { useNavigate } from "react-router-dom"
 import { useLogout } from "../../hooks/useLogout"
 
-const Sidebar = ( { itemIndex } ) =>
-{
-      const { logout } = useLogout()
+const Sidebar = ({ itemIndex }) => {
+    const { logout } = useLogout()
 
     console.log(itemIndex)
     const [selected, setSelected] = useState(itemIndex)
-  let navigate = useNavigate()
+    let navigate = useNavigate()
 
     const [expanded, setExpaned] = useState(true)
 
@@ -70,11 +69,9 @@ const Sidebar = ( { itemIndex } ) =>
                     {/* signoutIcon */}
                     <div className='menuItem'>
                         <UilSignOutAlt
-                            onClick={
-                                ( () => {
-                                    logout()
-                                })
-                            }
+                            onClick={() => {
+                                logout()
+                            }}
                         />
                     </div>
                 </div>
