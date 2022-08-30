@@ -1,11 +1,14 @@
 import React from "react"
-import Blank from "../Blank"
+import ProfileForm from "../../components/ProfileForm/ProfileForm"
 import RightSide from "../../components/RightSide/RightSide"
 import Sidebar from "../../components/Sidebar/Sidebar"
+
 function Profile() {
     return (
         <>
-                <Blank />
+            <Sidebar />
+            <ProfileForm />
+            <RightSide />
         </>
     )
 }

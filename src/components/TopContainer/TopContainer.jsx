@@ -6,19 +6,7 @@ import axios from "axios"
 import { getUserID, getToken } from "../../api/Device_api"
 
 function TopContainer() {
-    // useEffect(() => {
-    //     const mouseTarget = document.getElementById("menuChevron")
-    //     const menuContainer = document.getElementById("menuContainer")
-    //     mouseTarget.addEventListener("mouseenter", () => {
-    //         mouseTarget.style.transform = "rotate(180deg)"
-    //         menuContainer.style.transform = "translateX(0px)"
-    //     })
-
-    //     menuContainer.addEventListener("mouseleave", () => {
-    //         mouseTarget.style.transform = "rotate(0deg)"
-    //         menuContainer.style.transform = "translateX(300px)"
-    //     })
-    // }, [] )
+    
     
 const [data, setData] = useState(null)
 useEffect(() => {
@@ -46,21 +34,8 @@ useEffect(() => {
 }, [])
 
     
-    // if ( data ) {
-    //      useEffect(() => {
-    //          const mouseTarget = document.getElementById("menuChevron")
-    //          const menuContainer = document.getElementById("menuContainer")
-    //          mouseTarget.addEventListener("mouseenter", () => {
-    //              mouseTarget.style.transform = "rotate(180deg)"
-    //              menuContainer.style.transform = "translateX(0px)"
-    //          })
-
-    //          menuContainer.addEventListener("mouseleave", () => {
-    //              mouseTarget.style.transform = "rotate(0deg)"
-    //              menuContainer.style.transform = "translateX(300px)"
-    //          })
-    //      }, [])
-    // }
+    
+        
    
 if (data === null) return "Loading..."
 
@@ -71,19 +46,28 @@ if (data === null) return "Loading..."
                     <FaBell />
                 </i>
                 <div className='profileImage'>
-                    <img src={img} alt='' />
+                    <img src={data["image"]} alt='' />
                 </div>
                 <p className='profileName'>{data["email"]}</p>
-                <i className='menuChevron' id='menuChevron'>
+                <i
+                    className='menuChevron'
+                    id='menuChevron'
+                    >
                     <FaChevronDown />
                 </i>
 
-                <div className='menuContainer' id='menuContainer'>
+                <div
+                    className='menuContainer'
+                    id='menuContainer'
+                    onMouseEnter={() =>
+                        (this.style.transform = "rotate(0deg)")
+                    }
+                    onMouseLeave={() =>
+                        (this.style.transform = "rotate(180deg)")
+                    }>
+                    >
                     <ul>
-                        <li
-                        >
-                            Edit Profile
-                        </li>
+                        <li>Edit Profile</li>
                         <li>My devices</li>
                         <li>Logout</li>
                     </ul>
