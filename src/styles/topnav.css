@@ -1,0 +1,19 @@
+/* navbar */
+.container nav {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+ .container nav a, .container  nav button {
+  margin-left: 10px;
+}
+.container  nav button {
+  background: #fff;
+  color: rgb(153, 61, 61);
+  border: 2px solid rgb(92, 52, 52);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+}
