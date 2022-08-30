@@ -1,0 +1,6 @@
+.table-devices{
+display: flex;
+justify-content: center;
+align-items: top;
+flex-direction: column;
+}
