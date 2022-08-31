@@ -1,5 +1,4 @@
 import React from "react";
-import CustomerReview from "../StatsChart/StatsChart";
 import Notifications from "../Notifications/Notifications"
 import "./RightSide.css";
 import TopContainer from "../TopContainer/TopContainer"
@@ -12,10 +11,7 @@ const RightSide = () => {
               <h3>Notifications</h3>
               <Notifications />
           </div>
-          {/* <div>
-        <h3>Customer Review</h3>
-        <CustomerReview />
-      </div> */}
+          
       </div>
   )
 };

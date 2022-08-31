@@ -48,41 +48,43 @@ const Cards = () =>
         getData()	  
     }, [] )
     
+        const cardsData = [
+            {
+                title: "Temperature",
+                color: {
+                    backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
+                    boxShadow: "0px 10px 20px 0px #e0c6f5"
+                },
+                value: `${temp}°C`,
+                png: UilRaindrops
+            },
 
-    const cardsData = [
-        {
-            title: "Temperature",
-            color: {
-                backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
-                boxShadow: "0px 10px 20px 0px #e0c6f5"
+            {
+                title: "wind speed",
+                color: {
+                    backGround: "linear-gradient(180deg, #FF919D 0%, #FC929D 100%)",
+                    boxShadow: "0px 10px 20px 0px #FDC0C7"
+                },
+                value: `${wind} km/h`,
+                png: UilWind
             },
-            value: `${temp}°C`,
-            png: UilRaindrops
-        },
-
-        {
-            title: "wind speed",
-            color: {
-                backGround: "linear-gradient(180deg, #FF919D 0%, #FC929D 100%)",
-                boxShadow: "0px 10px 20px 0px #FDC0C7"
-            },
-            value: `${wind} km/h`,
-            png: UilWind
-        },
-        {
-            title: "humidity",
-            color: {
-                backGround:
-                    "linear-gradient(rgb(248, 212, 154) -146.42%, rgb(255 202 113) -46.42%)",
-                boxShadow: "0px 10px 20px 0px #F9D59B"
-            },
-            value: `${humidity} %`,
-            png: UilClouds
-        }
-    ]  
+            {
+                title: "humidity",
+                color: {
+                    backGround:
+                        "linear-gradient(rgb(248, 212, 154) -146.42%, rgb(255 202 113) -46.42%)",
+                    boxShadow: "0px 10px 20px 0px #F9D59B"
+                },
+                value: `${humidity} %`,
+                png: UilClouds
+            }
+        ]
+    
+      
             if (!data) return "Loading..."
                 return ( 
-                    <div className='Cards'>
+                    <div className='Cards'
+                    > 
                         {cardsData.map((card, id) => {
                             return (
                                 <div className='parentContainer' key={id}>
@@ -92,7 +94,6 @@ const Cards = () =>
                                         value={card.value}
                                         png={card.png}
                                     />
-                                    
                                 </div>
                             )
                         })}

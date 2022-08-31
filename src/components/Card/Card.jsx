@@ -1,8 +1,6 @@
 import "./Card.css";
 import { motion } from "framer-motion";
 
-
-
 const Card = (props) => {
   return (
     

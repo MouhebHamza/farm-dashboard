@@ -11,7 +11,7 @@ function Products ()
         
             
         <>
-            <Sidebar itemIndex="1" />
+            <Sidebar  />
             <div className='products-container'>
             <h1>Our products</h1>
             <div className='stats-container'>

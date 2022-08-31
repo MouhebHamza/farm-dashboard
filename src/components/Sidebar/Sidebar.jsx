@@ -8,11 +8,10 @@ import { motion } from "framer-motion"
 import { useNavigate } from "react-router-dom"
 import { useLogout } from "../../hooks/useLogout"
 
-const Sidebar = ({ itemIndex }) => {
+const Sidebar = () => {
     const { logout } = useLogout()
 
-    console.log(itemIndex)
-    const [selected, setSelected] = useState(itemIndex)
+    const [selected, setSelected] = useState(0)
     let navigate = useNavigate()
 
     const [expanded, setExpaned] = useState(true)
