@@ -16,7 +16,7 @@ function Stats ()
     }
     return (
         <>
-            <Sidebar itemIndex="1"/>
+            <Sidebar />
             <div className='stats-container'>
                 <StatsChart width={width} />
             </div>

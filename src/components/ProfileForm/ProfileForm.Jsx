@@ -2,7 +2,7 @@ import React, { useState ,useEffect} from 'react'
 import "./ProfileForm.css"
 import axios from "axios"
 import UploadImage from "./UploadImage"
-import { getUserID, getToken } from "../../api/Device_api"
+import { getUserID, getToken } from "../../api/Shared_api"
 
 function ProfileForm ()
 {

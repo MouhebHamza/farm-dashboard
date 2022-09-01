@@ -5,9 +5,9 @@ import { NotificationsData } from "../../Data/Data"
 const Notifications = () => {
     return (
         <div className='Updates'>
-            {NotificationsData.map(notification => {
+            {NotificationsData.map((notification,id) => {
                 return (
-                    <div className='update'>
+                    <div className='update' key={id}>
                         <div className='noti'>
                             <div style={{ marginBottom: "0.5rem" }}>
                                 <span>{notification.name}</span>
