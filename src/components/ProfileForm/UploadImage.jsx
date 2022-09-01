@@ -1,6 +1,6 @@
 import React, { useState ,useEffect} from "react"
 import { IconButton, Avatar } from "@mui/material"
-import { getUserID, getToken } from "../../api/Device_api"
+import { getUserID, getToken } from "../../api/Shared_api"
 import axios from "axios"
 const UploadAndDisplayImage = () => {
 const [file, setFile] = useState(null)

@@ -8,7 +8,7 @@ import TableRow from "@mui/material/TableRow"
 import Paper from "@mui/material/Paper"
 import "./Table.css"
 import axios from "axios"
-import { getUserID, getToken } from "../../api/Device_api"
+import { getUserID, getToken } from "../../api/Shared_api"
 
 
 const makeStyle = status => {

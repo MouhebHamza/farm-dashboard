@@ -1,8 +1,8 @@
 import { useState } from "react"
-import Navbar from "../components/Navbar"
-import { useLogin } from "../hooks/useLogin"
-import "../styles/Login.css"
-import "../styles/topnav.css"
+import Navbar from "../../components/Navbar/NAvbar"
+import { useLogin } from "../../hooks/useLogin"
+import "../../styles/Login.css"
+import "../../styles/topnav.css"
 
 const Login = () => {
     const [email, setEmail] = useState("")
