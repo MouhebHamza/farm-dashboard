@@ -1,6 +1,6 @@
 import React ,{useState,useEffect} from 'react'
 import "./ProductCard.scss"
-import { getUserID, getToken } from "../../api/Device_api"
+import { getUserID, getToken } from "../../api/Shared_api"
 import axios from "axios"
 import {ProductCardsData} from "../../Data/Data"
 export default function ProductCard ()

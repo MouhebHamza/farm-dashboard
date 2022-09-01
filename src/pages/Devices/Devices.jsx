@@ -10,7 +10,7 @@ function Devices ()
         
          <>
          
-            <Sidebar itemIndex="1" />
+            <Sidebar  />
             <div className='table-devices'>
                 <Table />
         </div>

@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react"
 import { FaBell, FaChevronDown } from "react-icons/fa"
-import img from "../../imgs/img1.png"
 import "./TopContainer.css"
 import axios from "axios"
-import { getUserID, getToken } from "../../api/Device_api"
+import { getUserID, getToken } from "../../api/Shared_api"
+import { useNavigate } from "react-router-dom"
+import { useLogout } from "../../hooks/useLogout"
 
 function TopContainer() {
-    
+    const { logout } = useLogout()
+    let navigate = useNavigate()
     
 const [data, setData] = useState(null)
 useEffect(() => {
@@ -48,28 +50,19 @@ if (data === null) return "Loading..."
                 <div className='profileImage'>
                     <img src={data["image"]} alt='' />
                 </div>
-                <p className='profileName'>{data["email"]}</p>
-                <i
-                    className='menuChevron'
-                    id='menuChevron'
-                    >
+                <p className='profileName'>welcome {data["firstname"]}</p>
+                <i className='menuChevron' id='menuChevron'>
                     <FaChevronDown />
                 </i>
 
-                <div
-                    className='menuContainer'
-                    id='menuContainer'
-                    onMouseEnter={() =>
-                        (this.style.transform = "rotate(0deg)")
-                    }
-                    onMouseLeave={() =>
-                        (this.style.transform = "rotate(180deg)")
-                    }>
-                    >
+                <div className='menuContainer' id='menuContainer'>
                     <ul>
-                        <li>Edit Profile</li>
-                        <li>My devices</li>
-                        <li>Logout</li>
+                        <li >Edit Profile</li>
+                        <li >My devices</li>
+                        <li
+                          >
+                            Logout
+                        </li>
                     </ul>
                 </div>
             </div>
