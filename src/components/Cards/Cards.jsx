@@ -96,7 +96,7 @@ const Cards = () =>
                                         value={card.value}
                                         png={card.png}
                                     />
-                                </div> 
+</div> 
                             )
                         })}
                     </div>  
