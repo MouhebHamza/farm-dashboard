@@ -110,18 +110,18 @@ export const cardsData = [
 // Recent Update Card Data
 export const NotificationsData = [
     {
-        name: "Andrew Thomas",
-        noti: "has ordered Apple smart watch 2500mh battery.",
+        name: "Alert",
+        noti: "The number of insects have exceeded the daily average ",
         time: "25 seconds ago"
     },
     {
-        name: "James Bond",
-        noti: "has received Samsung gadget for charging battery.",
+        name: "Alert",
+        noti: "The number of insects have reached 5.",
         time: "30 minutes ago"
     },
     {
-        name: "Iron Man",
-        noti: "has ordered Apple smart watch, samsung Gear 2500mh battery.",
+        name: "Welcome",
+        noti: "Welcome to iq farm dashboard.",
         time: "2 hours ago"
     }
 ]
