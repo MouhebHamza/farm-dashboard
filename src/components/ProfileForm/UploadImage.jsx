@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { IconButton, Avatar } from "@mui/material"
 import { getUserID, getToken } from "../../api/Shared_api"
 import axios from "axios"
+import './UploadImage.css'
 const UploadAndDisplayImage = () => {
     const [file, setFile] = useState(null)
   const [image, setImage] = useState({ preview: "", data: "" })
@@ -123,7 +124,7 @@ const UploadAndDisplayImage = () => {
                 </IconButton>
             </label>
             <label htmlFor='avatar' />
-            <button onClick={handleSubmit}>confirm </button>
+            <button className="btn"onClick={handleSubmit}>Confirm </button>
         </div>
     )
 }
