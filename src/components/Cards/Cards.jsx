@@ -20,6 +20,7 @@ const Cards = () =>
     const [data, setData] = useState(null)	  
    const [loading, setLoading] = useState(true)	  
    const [error, setError] = useState(null)
+   
     useEffect( () =>{	  
         const getData = async () => {	 
             try {	 
@@ -88,16 +89,17 @@ const Cards = () =>
                         {cardsData.map((card, id) => {
                             return (
                                 <div className='parentContainer' key={id}>
-                                    <Card
+                                    <Card   
                                         title={card.title}
-                                        color={card.color}
+                                        color={ card.color } 
+                                    
                                         value={card.value}
                                         png={card.png}
                                     />
-                                </div>
+</div> 
                             )
                         })}
-                    </div>
+                    </div>  
                 )
 };
 
